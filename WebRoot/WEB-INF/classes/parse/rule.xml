@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 根标签的标签名 -->
+<pattern value="class">
+	<!-- 将根标签中的属性按照名字设置到ClassBean对象的属性中 -->
+	<set-properties-rule></set-properties-rule>
+	
+	<!-- 根标签下的子标签 -->
+	<pattern value="student">
+		<!-- 将xml中配置的student标签封装成StudenBean对象 -->
+		<object-create-rule classname="parse.StudentBean"></object-create-rule>
+		<!-- 将根标签中的属性按照名字设置到StudentBean对象的属性中,在配置对象后才配置 -->
+		<set-properties-rule></set-properties-rule>
+		<!-- 将xml配置中name标签配置到StudentBean对象的name属性上 -->
+		<bean-property-setter-rule pattern="name"></bean-property-setter-rule>
+		<!-- 将每一个StudentBean对象加入到父节点ClassBean对象上 -->
+		<set-next-rule methodname="addStudent"></set-next-rule>
+	</pattern>
+</pattern>

@@ -1,0 +1,64 @@
+XML
+	可扩展标记语言
+	
+	
+	HTML缺陷:
+		没有一些表达内容的标签,只能使用预定义的标签,关心只是外观
+		无法真正实现数据的交互
+		很难通过搜索快速的找到对应的数据
+		结构层次国语单调
+		
+	
+	XML与HTML有什么区别
+		html主要用来显示数据,重视的是数据的外观
+		xml主要用来保存和传输数据,焦点是数据的内容
+		xml中必须有关闭标签
+		html中某些标签可以没有
+		
+	作用
+		保存和传输数据
+	
+	
+	解析
+		jdk提供的方式
+			SAX
+				基于事件
+					实现ContentHandler
+					
+				步骤:
+					1.获取Sax解析器
+					2.注册事件(需要创建一个事件类,该类实现了ContentHandler)
+					3.获取需要解析的xml文件的输入流
+					4.解析
+					
+			
+			DOM
+				基于树形结构
+				
+				步骤:
+					1.创建一个DOM工厂:DocumentBuilderFactory
+					2.创建DOM构建器:DocumentBuilder
+					3.获取需要解析的xml文件输入流
+					4.解析xml文件获取DOM文档:Document
+					5.按照DOM规范进行操作
+				
+		
+		
+		第三方提供的方式
+			dom4j
+				基于树形结构
+				
+				
+			jdom
+				基于树形结构
+				
+				
+			
+			commons-digester
+				将xml文件转换成java对象来做
+	
+	
+	
+	
+	
+	

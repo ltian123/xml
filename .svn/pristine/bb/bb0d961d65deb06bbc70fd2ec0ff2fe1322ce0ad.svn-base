@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class no="wbs16072">
+	<student id="1" gender="男">
+		<name>aaa</name>
+	</student>
+	<student id="2" gender="女">
+		<name>bbb</name>
+	</student>
+</class>
